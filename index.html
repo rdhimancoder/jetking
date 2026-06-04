@@ -1,0 +1,2626 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jetking Chandigarh – IT Cloud & Cyber Security Academy | Sector 34A</title>
+  <meta name="description" content="Jetking Chandigarh Centre – Become an IT Cloud & Cyber Security Engineer in 1 Year. 100% Placement Assistance. Located at SCO 66-67, Sector 34A, Chandigarh." />
+  <!-- Bootstrap 5.3 CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" />
+  <!-- FontAwesome 6.4 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+  <!-- Google Fonts -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800;900&display=swap" />
+
+  <style>
+    /* ============================================================
+       ROOT VARIABLES & GLOBAL RESETS
+    ============================================================ */
+    :root {
+      --primary: #1e3a8a;
+      --primary-light: #2d52b8;
+      --primary-dark: #152d6e;
+      --accent: #f59e0b;
+      --accent-dark: #d97706;
+      --accent-light: #fde68a;
+      --white: #ffffff;
+      --light-bg: #f8f9fa;
+      --light-alt: #f0f4ff;
+      --dark: #0f172a;
+      --dark-mid: #1e293b;
+      --text-muted-custom: #64748b;
+      --border-light: #e2e8f0;
+      --success-green: #10b981;
+      --grid-color: rgba(30, 58, 138, 0.06);
+      --shadow-card: 0 4px 24px rgba(30, 58, 138, 0.10);
+      --shadow-hover: 0 12px 40px rgba(30, 58, 138, 0.18);
+      --radius-card: 16px;
+      --radius-btn: 8px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: var(--white);
+      color: var(--dark);
+      overflow-x: hidden;
+    }
+
+    /* ============================================================
+       TECH GRID BACKGROUND UTILITY
+    ============================================================ */
+    .tech-grid-bg {
+      background-color: var(--light-alt);
+      background-image:
+        linear-gradient(var(--grid-color) 1px, transparent 1px),
+        linear-gradient(90deg, var(--grid-color) 1px, transparent 1px);
+      background-size: 40px 40px;
+    }
+
+    /* ============================================================
+       ANNOUNCEMENT BAR
+    ============================================================ */
+    #announcement-bar {
+      background: linear-gradient(90deg, var(--primary-dark) 0%, var(--primary) 50%, var(--primary-light) 100%);
+      color: var(--white);
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.4px;
+      padding: 9px 0;
+      z-index: 1100;
+    }
+    #announcement-bar .marquee-content {
+      display: inline-block;
+      white-space: nowrap;
+      animation: marqueeScroll 32s linear infinite;
+    }
+    #announcement-bar .marquee-content span {
+      display: inline-block;
+      padding-right: 80px;
+    }
+    #announcement-bar .marquee-content .sep {
+      color: var(--accent);
+      padding-right: 80px;
+      font-weight: 700;
+    }
+    @keyframes marqueeScroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    .announcement-badge {
+      background: var(--accent);
+      color: var(--dark);
+      font-size: 0.7rem;
+      font-weight: 700;
+      padding: 2px 10px;
+      border-radius: 20px;
+      margin-right: 12px;
+      letter-spacing: 0.5px;
+      white-space: nowrap;
+    }
+
+    /* ============================================================
+       NAVBAR
+    ============================================================ */
+    #main-navbar {
+      background: var(--white);
+      border-bottom: 2px solid var(--border-light);
+      padding: 0;
+      z-index: 1050;
+      box-shadow: 0 2px 20px rgba(30,58,138,0.08);
+    }
+    .navbar-brand-wrap {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+    }
+    .navbar-logo-icon {
+      width: 46px;
+      height: 46px;
+      background: linear-gradient(135deg, var(--primary), var(--primary-light));
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--white);
+      font-size: 1.3rem;
+      font-weight: 900;
+      flex-shrink: 0;
+    }
+    .navbar-brand-text .brand-name {
+      font-size: 1.35rem;
+      font-weight: 800;
+      color: var(--primary);
+      line-height: 1.1;
+      letter-spacing: -0.5px;
+    }
+    .navbar-brand-text .brand-center {
+      font-size: 0.68rem;
+      font-weight: 600;
+      color: var(--accent-dark);
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+    }
+    #main-navbar .nav-link {
+      font-size: 0.84rem;
+      font-weight: 600;
+      color: var(--dark-mid) !important;
+      padding: 1.5rem 1rem !important;
+      transition: color 0.2s;
+      letter-spacing: 0.2px;
+    }
+    #main-navbar .nav-link:hover { color: var(--primary) !important; }
+    #main-navbar .nav-link.active { color: var(--primary) !important; border-bottom: 2px solid var(--primary); }
+    .nav-cta-btn {
+      background: linear-gradient(135deg, var(--accent), var(--accent-dark));
+      color: var(--dark) !important;
+      font-weight: 700 !important;
+      font-size: 0.8rem !important;
+      padding: 0.5rem 1.2rem !important;
+      border-radius: var(--radius-btn);
+      border: none;
+      margin: auto 0;
+      transition: transform 0.2s, box-shadow 0.2s;
+      box-shadow: 0 3px 12px rgba(245,158,11,0.35);
+    }
+    .nav-cta-btn:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 6px 20px rgba(245,158,11,0.45);
+      color: var(--dark) !important;
+    }
+    .branch-selector .form-select {
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--primary);
+      border: 1.5px solid var(--primary);
+      border-radius: var(--radius-btn);
+      padding: 0.35rem 2rem 0.35rem 0.75rem;
+      background-color: var(--light-alt);
+    }
+
+    /* ============================================================
+       HERO SECTION
+    ============================================================ */
+    #hero {
+      background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 55%, var(--primary-light) 100%);
+      min-height: 92vh;
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+      padding: 80px 0 60px;
+    }
+    #hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
+      background-size: 50px 50px;
+      pointer-events: none;
+    }
+    .hero-glow-orb {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(90px);
+      pointer-events: none;
+    }
+    .hero-glow-orb.orb1 {
+      width: 500px; height: 500px;
+      background: rgba(245,158,11,0.12);
+      top: -100px; right: -100px;
+    }
+    .hero-glow-orb.orb2 {
+      width: 350px; height: 350px;
+      background: rgba(255,255,255,0.06);
+      bottom: -50px; left: 10%;
+    }
+    .hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(245,158,11,0.18);
+      border: 1px solid rgba(245,158,11,0.4);
+      color: var(--accent);
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding: 6px 16px;
+      border-radius: 30px;
+      margin-bottom: 22px;
+    }
+    .hero-eyebrow .pulse-dot {
+      width: 8px; height: 8px;
+      background: var(--accent);
+      border-radius: 50%;
+      animation: pulseDot 1.5s ease-in-out infinite;
+    }
+    @keyframes pulseDot {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.5; transform: scale(1.4); }
+    }
+    .hero-h1 {
+      font-size: clamp(2rem, 4.5vw, 3.4rem);
+      font-weight: 900;
+      color: var(--white);
+      line-height: 1.15;
+      letter-spacing: -1px;
+      margin-bottom: 18px;
+    }
+    .hero-h1 .accent-text {
+      color: var(--accent);
+      position: relative;
+    }
+    .hero-subtitle {
+      font-size: 1.02rem;
+      font-weight: 400;
+      color: rgba(255,255,255,0.82);
+      line-height: 1.75;
+      margin-bottom: 36px;
+      max-width: 560px;
+    }
+    .hero-cta-group { display: flex; gap: 14px; flex-wrap: wrap; }
+    .btn-hero-primary {
+      background: linear-gradient(135deg, var(--accent), var(--accent-dark));
+      color: var(--dark);
+      font-weight: 700;
+      font-size: 0.9rem;
+      padding: 14px 28px;
+      border-radius: var(--radius-btn);
+      border: none;
+      box-shadow: 0 6px 24px rgba(245,158,11,0.4);
+      transition: transform 0.25s, box-shadow 0.25s;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .btn-hero-primary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 36px rgba(245,158,11,0.55);
+      color: var(--dark);
+    }
+    .btn-hero-outline {
+      background: transparent;
+      color: var(--white);
+      font-weight: 700;
+      font-size: 0.9rem;
+      padding: 13px 28px;
+      border-radius: var(--radius-btn);
+      border: 2px solid rgba(255,255,255,0.55);
+      transition: background 0.25s, border-color 0.25s, transform 0.25s;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .btn-hero-outline:hover {
+      background: rgba(255,255,255,0.1);
+      border-color: var(--white);
+      transform: translateY(-3px);
+      color: var(--white);
+    }
+    .hero-trust-strip {
+      display: flex;
+      gap: 24px;
+      flex-wrap: wrap;
+      margin-top: 40px;
+    }
+    .hero-trust-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: rgba(255,255,255,0.75);
+      font-size: 0.8rem;
+      font-weight: 500;
+    }
+    .hero-trust-item i { color: var(--accent); font-size: 1rem; }
+
+    /* Hero Visual Card */
+    .hero-visual-card {
+      background: rgba(255,255,255,0.07);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 20px;
+      padding: 28px;
+      color: var(--white);
+    }
+    .hero-visual-card .card-title-sm {
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      color: var(--accent);
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+    .hero-stat-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+    .hero-stat-item {
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 12px;
+      padding: 16px 14px;
+      text-align: center;
+    }
+    .hero-stat-item .stat-num {
+      font-size: 1.6rem;
+      font-weight: 800;
+      color: var(--accent);
+      line-height: 1.1;
+    }
+    .hero-stat-item .stat-label {
+      font-size: 0.68rem;
+      color: rgba(255,255,255,0.7);
+      font-weight: 500;
+      margin-top: 4px;
+      line-height: 1.3;
+    }
+    .hero-placement-badge {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      background: linear-gradient(135deg, rgba(16,185,129,0.2), rgba(16,185,129,0.08));
+      border: 1px solid rgba(16,185,129,0.35);
+      border-radius: 12px;
+      padding: 14px 16px;
+      margin-top: 14px;
+    }
+    .hero-placement-badge .badge-icon {
+      font-size: 2rem;
+      color: #10b981;
+    }
+    .hero-placement-badge .badge-text .big { font-size: 1.2rem; font-weight: 800; color: #10b981; }
+    .hero-placement-badge .badge-text .small { font-size: 0.7rem; color: rgba(255,255,255,0.7); }
+
+    /* Tech icon orbit */
+    .tech-orbit {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 14px;
+    }
+    .tech-orbit-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 5px;
+    }
+    .tech-orbit-item .icon-wrap {
+      width: 44px; height: 44px;
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      color: var(--accent);
+      transition: transform 0.3s;
+    }
+    .tech-orbit-item:hover .icon-wrap { transform: translateY(-4px); }
+    .tech-orbit-item span { font-size: 0.58rem; color: rgba(255,255,255,0.6); font-weight: 500; }
+
+    /* ============================================================
+       SECTION HEADERS
+    ============================================================ */
+    .section-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--accent-dark);
+      margin-bottom: 10px;
+    }
+    .section-label::before {
+      content: '';
+      width: 20px; height: 2px;
+      background: var(--accent);
+      border-radius: 2px;
+    }
+    .section-heading {
+      font-size: clamp(1.7rem, 3vw, 2.4rem);
+      font-weight: 800;
+      color: var(--primary);
+      line-height: 1.2;
+      letter-spacing: -0.5px;
+      margin-bottom: 12px;
+    }
+    .section-subheading {
+      font-size: 0.95rem;
+      color: var(--text-muted-custom);
+      font-weight: 400;
+      line-height: 1.7;
+      max-width: 600px;
+    }
+
+    /* ============================================================
+       METRICS SECTION
+    ============================================================ */
+    #metrics {
+      background: var(--white);
+      padding: 70px 0;
+    }
+    .metric-card {
+      background: var(--white);
+      border: 1.5px solid var(--border-light);
+      border-radius: var(--radius-card);
+      padding: 32px 24px;
+      text-align: center;
+      transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+      position: relative;
+      overflow: hidden;
+    }
+    .metric-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--primary), var(--primary-light));
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+    .metric-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-hover);
+      border-color: var(--primary);
+    }
+    .metric-card:hover::before { opacity: 1; }
+    .metric-card .metric-icon {
+      width: 60px; height: 60px;
+      background: var(--light-alt);
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      color: var(--primary);
+      margin: 0 auto 18px;
+      transition: background 0.3s, color 0.3s;
+    }
+    .metric-card:hover .metric-icon {
+      background: var(--primary);
+      color: var(--white);
+    }
+    .metric-card .metric-number {
+      font-size: 2.2rem;
+      font-weight: 900;
+      color: var(--primary);
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+    .metric-card .metric-number .accent { color: var(--accent-dark); }
+    .metric-card .metric-title {
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--dark-mid);
+      line-height: 1.4;
+    }
+    .metric-card .metric-desc {
+      font-size: 0.72rem;
+      color: var(--text-muted-custom);
+      margin-top: 6px;
+      line-height: 1.5;
+    }
+
+    /* ============================================================
+       COURSES SECTION
+    ============================================================ */
+    #courses {
+      background: var(--light-bg);
+      padding: 80px 0;
+    }
+    .course-filter-tabs {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 36px;
+    }
+    .filter-tab {
+      background: var(--white);
+      border: 1.5px solid var(--border-light);
+      color: var(--dark-mid);
+      font-size: 0.82rem;
+      font-weight: 600;
+      padding: 9px 22px;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: all 0.25s;
+    }
+    .filter-tab:hover { border-color: var(--primary); color: var(--primary); }
+    .filter-tab.active {
+      background: var(--primary);
+      border-color: var(--primary);
+      color: var(--white);
+      box-shadow: 0 4px 14px rgba(30,58,138,0.3);
+    }
+    .course-card {
+      background: var(--white);
+      border: 1.5px solid var(--border-light);
+      border-radius: var(--radius-card);
+      padding: 28px 24px;
+      transition: transform 0.3s, box-shadow 0.3s;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      overflow: hidden;
+    }
+    .course-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-hover);
+    }
+    .course-card .course-accent-bar {
+      position: absolute;
+      left: 0; top: 0; bottom: 0;
+      width: 4px;
+      background: linear-gradient(180deg, var(--primary), var(--primary-light));
+    }
+    .course-card.accent-orange .course-accent-bar {
+      background: linear-gradient(180deg, var(--accent), var(--accent-dark));
+    }
+    .course-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+      padding: 4px 12px;
+      border-radius: 20px;
+      margin-bottom: 14px;
+    }
+    .course-badge.career { background: rgba(30,58,138,0.1); color: var(--primary); }
+    .course-badge.cert { background: rgba(245,158,11,0.15); color: var(--accent-dark); }
+    .course-icon-wrap {
+      width: 56px; height: 56px;
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      margin-bottom: 16px;
+    }
+    .course-icon-wrap.blue { background: var(--light-alt); color: var(--primary); }
+    .course-icon-wrap.orange { background: rgba(245,158,11,0.1); color: var(--accent-dark); }
+    .course-card h5 {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--dark);
+      margin-bottom: 10px;
+      line-height: 1.35;
+    }
+    .course-card .course-desc {
+      font-size: 0.8rem;
+      color: var(--text-muted-custom);
+      line-height: 1.65;
+      margin-bottom: 16px;
+      flex-grow: 1;
+    }
+    .course-meta {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 16px;
+    }
+    .course-meta-item {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: var(--text-muted-custom);
+    }
+    .course-meta-item i { color: var(--primary); font-size: 0.8rem; }
+    .course-topics {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 18px;
+    }
+    .topic-chip {
+      background: var(--light-alt);
+      color: var(--primary);
+      font-size: 0.65rem;
+      font-weight: 600;
+      padding: 3px 10px;
+      border-radius: 20px;
+      border: 1px solid rgba(30,58,138,0.12);
+    }
+    .btn-course {
+      background: var(--primary);
+      color: var(--white);
+      font-size: 0.8rem;
+      font-weight: 700;
+      padding: 10px 20px;
+      border-radius: var(--radius-btn);
+      border: none;
+      cursor: pointer;
+      transition: background 0.25s, transform 0.25s;
+      text-align: center;
+      display: block;
+      width: 100%;
+      text-decoration: none;
+    }
+    .btn-course:hover {
+      background: var(--primary-dark);
+      transform: translateY(-2px);
+      color: var(--white);
+    }
+    .btn-course.orange {
+      background: linear-gradient(135deg, var(--accent), var(--accent-dark));
+      color: var(--dark);
+    }
+    .btn-course.orange:hover { color: var(--dark); }
+    .featured-ribbon {
+      position: absolute;
+      top: 20px; right: -28px;
+      background: var(--accent);
+      color: var(--dark);
+      font-size: 0.62rem;
+      font-weight: 800;
+      letter-spacing: 0.5px;
+      padding: 4px 36px;
+      transform: rotate(45deg);
+      text-transform: uppercase;
+    }
+
+    /* ============================================================
+       WHY JETKING CHANDIGARH
+    ============================================================ */
+    #why-jetking {
+      padding: 80px 0;
+      background: var(--white);
+    }
+    .feature-card {
+      display: flex;
+      gap: 18px;
+      padding: 24px;
+      background: var(--white);
+      border: 1.5px solid var(--border-light);
+      border-radius: var(--radius-card);
+      transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+      height: 100%;
+    }
+    .feature-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-card);
+      border-color: var(--primary);
+    }
+    .feature-icon {
+      width: 52px; height: 52px;
+      min-width: 52px;
+      background: var(--light-alt);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.3rem;
+      color: var(--primary);
+      transition: background 0.3s;
+    }
+    .feature-card:hover .feature-icon { background: var(--primary); color: var(--white); }
+    .feature-content h6 {
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--dark);
+      margin-bottom: 6px;
+    }
+    .feature-content p {
+      font-size: 0.78rem;
+      color: var(--text-muted-custom);
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    /* ============================================================
+       PLACEMENT STRIP
+    ============================================================ */
+    #placement-strip {
+      background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+      padding: 60px 0;
+      position: relative;
+      overflow: hidden;
+    }
+    #placement-strip::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+      background-size: 40px 40px;
+    }
+    .placement-stat {
+      text-align: center;
+      padding: 16px 20px;
+      border-right: 1px solid rgba(255,255,255,0.1);
+    }
+    .placement-stat:last-child { border-right: none; }
+    .placement-stat .p-num {
+      font-size: 2.6rem;
+      font-weight: 900;
+      color: var(--accent);
+      line-height: 1;
+    }
+    .placement-stat .p-label {
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.8);
+      font-weight: 500;
+      margin-top: 6px;
+    }
+
+    /* ============================================================
+       SMART LAB SECTION
+    ============================================================ */
+    #smart-lab {
+      padding: 80px 0;
+      background: var(--light-bg);
+    }
+    .lab-feature-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      padding: 18px 0;
+      border-bottom: 1px solid var(--border-light);
+    }
+    .lab-feature-item:last-child { border-bottom: none; }
+    .lab-feature-item .lab-icon {
+      width: 40px; height: 40px;
+      min-width: 40px;
+      background: var(--light-alt);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--primary);
+      font-size: 1rem;
+    }
+    .lab-feature-item h6 {
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: var(--dark);
+      margin-bottom: 4px;
+    }
+    .lab-feature-item p {
+      font-size: 0.75rem;
+      color: var(--text-muted-custom);
+      margin: 0;
+      line-height: 1.55;
+    }
+    .lab-image-showcase {
+      background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+      border-radius: 20px;
+      padding: 40px 30px;
+      color: var(--white);
+      position: relative;
+      overflow: hidden;
+      min-height: 440px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+    }
+    .lab-image-showcase::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
+      background-size: 30px 30px;
+    }
+    .lab-icon-large {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -55%);
+      font-size: 7rem;
+      color: rgba(255,255,255,0.08);
+    }
+    .lab-floating-cards {
+      position: absolute;
+      top: 30px;
+      right: 30px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .lab-float-chip {
+      background: rgba(255,255,255,0.12);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 10px;
+      padding: 8px 14px;
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: var(--white);
+      display: flex;
+      align-items: center;
+      gap: 7px;
+    }
+    .lab-float-chip i { color: var(--accent); }
+
+    /* ============================================================
+       LEAD CAPTURE FORM SECTION
+    ============================================================ */
+    #lead-capture {
+      padding: 80px 0;
+      background: var(--white);
+    }
+    .lead-form-card {
+      background: var(--white);
+      border: 1.5px solid var(--border-light);
+      border-radius: 20px;
+      padding: 40px;
+      box-shadow: var(--shadow-card);
+    }
+    .lead-form-card h3 {
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: var(--primary);
+      margin-bottom: 6px;
+    }
+    .lead-form-card .form-label {
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--dark-mid);
+      margin-bottom: 6px;
+    }
+    .lead-form-card .form-control,
+    .lead-form-card .form-select {
+      border: 1.5px solid var(--border-light);
+      border-radius: 8px;
+      font-size: 0.85rem;
+      padding: 11px 14px;
+      font-family: 'Poppins', sans-serif;
+      color: var(--dark);
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+    .lead-form-card .form-control:focus,
+    .lead-form-card .form-select:focus {
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(30,58,138,0.1);
+    }
+    .btn-submit-lead {
+      background: linear-gradient(135deg, var(--primary), var(--primary-light));
+      color: var(--white);
+      font-weight: 700;
+      font-size: 0.95rem;
+      padding: 14px;
+      border: none;
+      border-radius: 8px;
+      width: 100%;
+      cursor: pointer;
+      transition: transform 0.25s, box-shadow 0.25s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+    .btn-submit-lead:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(30,58,138,0.35);
+    }
+    .form-success-toast {
+      display: none;
+      background: rgba(16,185,129,0.1);
+      border: 1.5px solid rgba(16,185,129,0.35);
+      border-radius: 12px;
+      padding: 18px 20px;
+      margin-top: 18px;
+      color: #065f46;
+      font-size: 0.85rem;
+      font-weight: 600;
+    }
+    .form-success-toast i { color: var(--success-green); margin-right: 8px; }
+    .lead-info-panel {
+      padding: 30px;
+      background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+      border-radius: 20px;
+      color: var(--white);
+      height: 100%;
+    }
+    .lead-info-panel h4 { font-size: 1.2rem; font-weight: 800; margin-bottom: 20px; }
+    .contact-info-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      padding: 16px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+    .contact-info-item:last-child { border-bottom: none; }
+    .contact-info-item .ci-icon {
+      width: 40px; height: 40px;
+      min-width: 40px;
+      background: rgba(255,255,255,0.12);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+      color: var(--accent);
+    }
+    .contact-info-item .ci-label {
+      font-size: 0.7rem;
+      color: rgba(255,255,255,0.6);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 3px;
+    }
+    .contact-info-item .ci-value {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--white);
+      line-height: 1.45;
+    }
+    .contact-info-item .ci-value a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 700;
+    }
+    .contact-info-item .ci-value a:hover { text-decoration: underline; }
+
+    /* ============================================================
+       MAP SECTION
+    ============================================================ */
+    #location-map {
+      background: var(--light-bg);
+      padding: 60px 0;
+    }
+    .map-card {
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: var(--shadow-card);
+      border: 1.5px solid var(--border-light);
+    }
+    .map-placeholder {
+      height: 380px;
+      background: linear-gradient(135deg, #e8f0fe, #dde9ff);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 16px;
+      font-size: 1rem;
+      color: var(--primary);
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+    .map-placeholder:hover { background: linear-gradient(135deg, #dde9ff, #c7d9ff); }
+    .map-placeholder .map-icon { font-size: 3.5rem; color: var(--primary); opacity: 0.7; }
+    .map-placeholder .map-label { font-size: 0.9rem; }
+    .map-placeholder .map-addr { font-size: 0.78rem; color: var(--text-muted-custom); font-weight: 400; text-align: center; }
+
+    /* ============================================================
+       MODAL LEAD CAPTURE
+    ============================================================ */
+    .modal-content {
+      border: none;
+      border-radius: 20px;
+      overflow: hidden;
+    }
+    .modal-header-custom {
+      background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+      color: var(--white);
+      padding: 24px 28px;
+      border-bottom: none;
+    }
+    .modal-header-custom .modal-title {
+      font-size: 1.15rem;
+      font-weight: 800;
+    }
+    .modal-header-custom .btn-close {
+      filter: invert(1);
+    }
+    .modal-body-custom { padding: 28px; }
+    .modal-form-label {
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--dark-mid);
+      margin-bottom: 5px;
+    }
+    .modal-form-control {
+      border: 1.5px solid var(--border-light);
+      border-radius: 8px;
+      font-size: 0.85rem;
+      padding: 10px 14px;
+      font-family: 'Poppins', sans-serif;
+      width: 100%;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+    .modal-form-control:focus {
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(30,58,138,0.1);
+      outline: none;
+    }
+    .btn-modal-submit {
+      background: linear-gradient(135deg, var(--accent), var(--accent-dark));
+      color: var(--dark);
+      font-weight: 700;
+      font-size: 0.9rem;
+      padding: 13px;
+      border: none;
+      border-radius: 8px;
+      width: 100%;
+      cursor: pointer;
+      transition: transform 0.25s, box-shadow 0.25s;
+    }
+    .btn-modal-submit:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(245,158,11,0.4);
+    }
+    .modal-trust-badges {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 18px;
+      padding-top: 18px;
+      border-top: 1px solid var(--border-light);
+    }
+    .modal-trust-badge {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 0.7rem;
+      font-weight: 600;
+      color: var(--text-muted-custom);
+    }
+    .modal-trust-badge i { color: var(--success-green); }
+
+    /* ============================================================
+       FOOTER
+    ============================================================ */
+    #footer {
+      background: var(--dark);
+      color: rgba(255,255,255,0.75);
+      padding: 60px 0 0;
+    }
+    .footer-logo-wrap {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 16px;
+    }
+    .footer-logo-icon {
+      width: 44px; height: 44px;
+      background: linear-gradient(135deg, var(--primary), var(--primary-light));
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--white);
+      font-size: 1.2rem;
+      font-weight: 900;
+    }
+    .footer-brand-name { font-size: 1.3rem; font-weight: 800; color: var(--white); }
+    .footer-tagline { font-size: 0.72rem; color: rgba(255,255,255,0.5); margin-top: 2px; }
+    .footer-desc { font-size: 0.8rem; line-height: 1.7; color: rgba(255,255,255,0.6); margin-bottom: 20px; }
+    .footer-social-links { display: flex; gap: 10px; }
+    .social-btn {
+      width: 36px; height: 36px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: rgba(255,255,255,0.7);
+      font-size: 0.85rem;
+      text-decoration: none;
+      transition: background 0.25s, color 0.25s, transform 0.25s;
+    }
+    .social-btn:hover {
+      background: var(--primary);
+      color: var(--white);
+      transform: translateY(-3px);
+    }
+    .footer-col-title {
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: var(--white);
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+      position: relative;
+      padding-bottom: 10px;
+    }
+    .footer-col-title::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0;
+      width: 28px; height: 2px;
+      background: var(--accent);
+      border-radius: 2px;
+    }
+    .footer-links { list-style: none; padding: 0; }
+    .footer-links li { margin-bottom: 9px; }
+    .footer-links a {
+      color: rgba(255,255,255,0.6);
+      text-decoration: none;
+      font-size: 0.8rem;
+      font-weight: 400;
+      transition: color 0.2s, padding-left 0.2s;
+      display: flex;
+      align-items: center;
+      gap: 7px;
+    }
+    .footer-links a:hover { color: var(--accent); padding-left: 4px; }
+    .footer-links a i { font-size: 0.65rem; color: var(--accent); }
+    .footer-contact-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      margin-bottom: 12px;
+      font-size: 0.78rem;
+      color: rgba(255,255,255,0.65);
+    }
+    .footer-contact-item i { color: var(--accent); margin-top: 2px; flex-shrink: 0; }
+    .footer-contact-item a { color: var(--accent); text-decoration: none; }
+    .footer-contact-item a:hover { text-decoration: underline; }
+    .footer-divider {
+      border-top: 1px solid rgba(255,255,255,0.08);
+      margin-top: 50px;
+      padding: 20px 0;
+    }
+    .footer-bottom-text {
+      font-size: 0.75rem;
+      color: rgba(255,255,255,0.45);
+    }
+    .footer-accreditation {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(245,158,11,0.12);
+      border: 1px solid rgba(245,158,11,0.25);
+      color: var(--accent);
+      font-size: 0.68rem;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 6px;
+      margin-top: 8px;
+    }
+
+    /* ============================================================
+       STICKY WHATSAPP & CALL BUTTONS
+    ============================================================ */
+    .floating-actions {
+      position: fixed;
+      bottom: 30px;
+      right: 24px;
+      z-index: 999;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .float-btn {
+      width: 52px; height: 52px;
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.3rem;
+      text-decoration: none;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+      transition: transform 0.25s, box-shadow 0.25s;
+    }
+    .float-btn:hover { transform: translateY(-4px) scale(1.08); box-shadow: 0 12px 30px rgba(0,0,0,0.25); }
+    .float-btn.whatsapp { background: #25D366; color: var(--white); }
+    .float-btn.call { background: var(--accent); color: var(--dark); }
+
+    /* ============================================================
+       RESPONSIVE OVERRIDES
+    ============================================================ */
+    @media (max-width: 768px) {
+      #hero { padding-top: 60px; padding-bottom: 50px; min-height: auto; }
+      .hero-h1 { font-size: 1.9rem; }
+      .hero-cta-group { flex-direction: column; }
+      .btn-hero-primary, .btn-hero-outline { width: 100%; justify-content: center; }
+      .hero-trust-strip { gap: 14px; }
+      .metric-card { margin-bottom: 16px; }
+      .placement-stat { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.1); padding: 14px; }
+      .placement-stat:last-child { border-bottom: none; }
+      .lead-form-card { padding: 24px 18px; }
+      .lead-info-panel { padding: 24px 18px; margin-top: 24px; }
+      .floating-actions { bottom: 20px; right: 14px; }
+    }
+
+    @media (max-width: 576px) {
+      .hero-stat-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
+      .hero-visual-card { margin-top: 30px; }
+      .section-heading { font-size: 1.6rem; }
+    }
+
+    /* ============================================================
+       ANIMATIONS
+    ============================================================ */
+    .fade-in-up {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .fade-in-up.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .delay-1 { transition-delay: 0.1s; }
+    .delay-2 { transition-delay: 0.2s; }
+    .delay-3 { transition-delay: 0.3s; }
+    .delay-4 { transition-delay: 0.4s; }
+
+    /* Counter animation */
+    .count-up { display: inline-block; }
+
+    /* Custom scrollbar */
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: var(--light-bg); }
+    ::-webkit-scrollbar-thumb { background: var(--primary); border-radius: 10px; }
+  </style>
+</head>
+<body>
+
+<!-- ============================================================
+     ANNOUNCEMENT BAR
+============================================================ -->
+<div id="announcement-bar">
+  <div class="container-fluid px-0" style="overflow: hidden;">
+    <div style="display:flex; align-items:center;">
+      <span class="announcement-badge ms-3 flex-shrink-0">🎯 LIVE</span>
+      <div style="overflow:hidden; flex:1;">
+        <div class="marquee-content">
+          <span>🏆 Jetking Career Upgrade — 79+ Years Legacy of Success</span>
+          <span class="sep">★</span>
+          <span>🎓 12,00,000+ Students Trained Nationwide — Your Career Starts Here</span>
+          <span class="sep">★</span>
+          <span>☁️ New Batch Starting Soon — Cloud & Cyber Security Engineering Program</span>
+          <span class="sep">★</span>
+          <span>📞 Call Now: +91-8059402528 — Limited Seats Available!</span>
+          <span class="sep">★</span>
+          <span>🏆 Jetking Career Upgrade — 79+ Years Legacy of Success</span>
+          <span class="sep">★</span>
+          <span>🎓 12,00,000+ Students Trained Nationwide — Your Career Starts Here</span>
+          <span class="sep">★</span>
+          <span>☁️ New Batch Starting Soon — Cloud & Cyber Security Engineering Program</span>
+          <span class="sep">★</span>
+          <span>📞 Call Now: +91-8059402528 — Limited Seats Available!</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================
+     NAVBAR
+============================================================ -->
+<nav class="navbar navbar-expand-lg sticky-top" id="main-navbar">
+  <div class="container">
+    <a class="navbar-brand-wrap" href="#">
+      <div class="navbar-logo-icon">JK</div>
+      <div class="navbar-brand-text">
+        <div class="brand-name">Jetking</div>
+        <div class="brand-center">Chandigarh Centre</div>
+      </div>
+    </a>
+
+    <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarMain">
+      <ul class="navbar-nav mx-auto">
+        <li class="nav-item"><a class="nav-link active" href="#hero">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#courses">Courses</a></li>
+        <li class="nav-item"><a class="nav-link" href="#why-jetking">Why Jetking</a></li>
+        <li class="nav-item"><a class="nav-link" href="#smart-lab">Smart Labs</a></li>
+        <li class="nav-item"><a class="nav-link" href="#lead-capture">Contact</a></li>
+      </ul>
+      <div class="d-flex align-items-center gap-3 mt-2 mt-lg-0">
+        <div class="branch-selector d-none d-lg-block">
+          <select class="form-select form-select-sm" aria-label="Select Branch">
+            <option selected>📍 Sector 34A, Chandigarh</option>
+            <option>Jetking Mohali</option>
+            <option>Jetking Panchkula</option>
+          </select>
+        </div>
+        <button class="nav-cta-btn" onclick="openLeadModal('navbar-cta')">
+          <i class="fa-solid fa-calendar-check me-1"></i> Enrol Now
+        </button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- ============================================================
+     HERO SECTION
+============================================================ -->
+<section id="hero">
+  <div class="hero-glow-orb orb1"></div>
+  <div class="hero-glow-orb orb2"></div>
+
+  <div class="container">
+    <div class="row align-items-center gy-5">
+      <!-- Left Content -->
+      <div class="col-lg-7">
+        <div class="hero-eyebrow">
+          <span class="pulse-dot"></span>
+          Chandigarh's #1 IT Certification Academy — Sector 34A
+        </div>
+
+        <h1 class="hero-h1">
+          Become an <span class="accent-text">IT Cloud &<br>Cyber Security</span><br>Engineer in 1 Year
+        </h1>
+
+        <p class="hero-subtitle">
+          No technical background required. Get immersive, hands-on experience in Jetking Smart Labs with dedicated <strong style="color:var(--accent);">100% Placement Assistance</strong> — designed for 10+2 graduates, non-IT professionals, and engineering aspirants across Chandigarh & Tricity region.
+        </p>
+
+        <div class="hero-cta-group">
+          <button class="btn-hero-primary" onclick="openLeadModal('brochure')">
+            <i class="fa-solid fa-file-arrow-down"></i>
+            Download Brochure & Fee Structure
+          </button>
+          <button class="btn-hero-outline" onclick="openLeadModal('demo')">
+            <i class="fa-solid fa-flask"></i>
+            Book Free Smart Lab Demo
+          </button>
+        </div>
+
+        <div class="hero-trust-strip">
+          <div class="hero-trust-item">
+            <i class="fa-solid fa-shield-halved"></i>
+            <span>100% Placement Assistance</span>
+          </div>
+          <div class="hero-trust-item">
+            <i class="fa-solid fa-certificate"></i>
+            <span>Industry-Recognized Certifications</span>
+          </div>
+          <div class="hero-trust-item">
+            <i class="fa-solid fa-building-columns"></i>
+            <span>79+ Year Trusted Legacy</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Visual Card -->
+      <div class="col-lg-5">
+        <div class="hero-visual-card">
+          <div class="card-title-sm"><i class="fa-solid fa-chart-line me-1"></i> Chandigarh Centre Performance Dashboard</div>
+
+          <div class="hero-stat-grid">
+            <div class="hero-stat-item">
+              <div class="stat-num">79<span style="font-size:1.2rem">+</span></div>
+              <div class="stat-label">Years of Training Legacy</div>
+            </div>
+            <div class="hero-stat-item">
+              <div class="stat-num">1.2M<span style="font-size:1rem">+</span></div>
+              <div class="stat-label">Careers Advanced</div>
+            </div>
+            <div class="hero-stat-item">
+              <div class="stat-num">5K<span style="font-size:1rem">+</span></div>
+              <div class="stat-label">Corporate Partners</div>
+            </div>
+            <div class="hero-stat-item">
+              <div class="stat-num">₹7.3</div>
+              <div class="stat-label">Avg LPA — Cloud Engineers</div>
+            </div>
+          </div>
+
+          <div class="hero-placement-badge">
+            <div class="badge-icon"><i class="fa-solid fa-circle-check"></i></div>
+            <div class="badge-text">
+              <div class="big">100% Placement</div>
+              <div class="small">Guaranteed Assistance for All Enrolled Students</div>
+            </div>
+          </div>
+
+          <div class="tech-orbit mt-3">
+            <div class="tech-orbit-item">
+              <div class="icon-wrap"><i class="fa-brands fa-aws"></i></div>
+              <span>AWS</span>
+            </div>
+            <div class="tech-orbit-item">
+              <div class="icon-wrap"><i class="fa-brands fa-microsoft"></i></div>
+              <span>Azure</span>
+            </div>
+            <div class="tech-orbit-item">
+              <div class="icon-wrap"><i class="fa-solid fa-shield-halved"></i></div>
+              <span>Cyber Sec</span>
+            </div>
+            <div class="tech-orbit-item">
+              <div class="icon-wrap"><i class="fa-brands fa-linux"></i></div>
+              <span>Linux</span>
+            </div>
+            <div class="tech-orbit-item">
+              <div class="icon-wrap"><i class="fa-solid fa-network-wired"></i></div>
+              <span>Networks</span>
+            </div>
+            <div class="tech-orbit-item">
+              <div class="icon-wrap"><i class="fa-solid fa-microchip"></i></div>
+              <span>AI/ML</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     METRICS SECTION
+============================================================ -->
+<section id="metrics">
+  <div class="container">
+    <div class="text-center mb-10">
+      <div class="section-label mx-auto d-inline-flex">Institutional Authority</div>
+      <h2 class="section-heading text-center">Backed by 79 Years of Unmatched Excellence</h2>
+      <p class="section-subheading mx-auto text-center" style="margin-bottom:40px;">India's most trusted IT training institution with a proven track record of transforming careers across every industry vertical.</p>
+    </div>
+
+    <div class="row g-4">
+      <div class="col-6 col-md-3 fade-in-up">
+        <div class="metric-card h-100">
+          <div class="metric-icon"><i class="fa-solid fa-hourglass-half"></i></div>
+          <div class="metric-number"><span class="count-up" data-target="79">0</span><span class="accent">+</span></div>
+          <div class="metric-title">Years of Training Legacy</div>
+          <div class="metric-desc">Established 1945 — India's Pioneer IT Training Institution</div>
+        </div>
+      </div>
+      <div class="col-6 col-md-3 fade-in-up delay-1">
+        <div class="metric-card h-100">
+          <div class="metric-icon"><i class="fa-solid fa-users-gear"></i></div>
+          <div class="metric-number"><span class="count-up" data-target="12">0</span><span class="accent">L+</span></div>
+          <div class="metric-title">Careers Advanced Globally</div>
+          <div class="metric-desc">1.2 Million+ professionals placed in top tech companies worldwide</div>
+        </div>
+      </div>
+      <div class="col-6 col-md-3 fade-in-up delay-2">
+        <div class="metric-card h-100">
+          <div class="metric-icon"><i class="fa-solid fa-handshake"></i></div>
+          <div class="metric-number"><span class="count-up" data-target="5000">0</span><span class="accent">+</span></div>
+          <div class="metric-title">Global Corporate Partners</div>
+          <div class="metric-desc">TCS, Wipro, Infosys, HCL, Tech Mahindra & 5000+ more hiring partners</div>
+        </div>
+      </div>
+      <div class="col-6 col-md-3 fade-in-up delay-3">
+        <div class="metric-card h-100">
+          <div class="metric-icon"><i class="fa-solid fa-indian-rupee-sign"></i></div>
+          <div class="metric-number"><span class="accent">₹</span><span class="count-up" data-target="7" data-decimal=".3">0</span><span class="accent">LPA</span></div>
+          <div class="metric-title">Avg Cloud Engineer CTC</div>
+          <div class="metric-desc">Average package in Chandigarh region for Jetking-certified cloud professionals</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     COURSES SECTION
+============================================================ -->
+<section id="courses" class="tech-grid-bg">
+  <div class="container">
+    <div class="row mb-4 align-items-end">
+      <div class="col-lg-7">
+        <div class="section-label">Course Catalog</div>
+        <h2 class="section-heading">Industry-Aligned Programs<br>Designed for Real Outcomes</h2>
+        <p class="section-subheading">Choose from comprehensive career programs or targeted certification courses — each curriculum built with direct industry input and certified by global tech standards.</p>
+      </div>
+      <div class="col-lg-5 text-lg-end">
+        <button class="btn-hero-primary mt-3 mt-lg-0" onclick="openLeadModal('courses')" style="display:inline-flex; font-size:0.85rem; padding:11px 22px;">
+          <i class="fa-solid fa-phone-volume me-2"></i> Talk to Course Advisor
+        </button>
+      </div>
+    </div>
+
+    <!-- Filter Tabs -->
+    <div class="course-filter-tabs mb-4" id="filterTabs">
+      <button class="filter-tab active" data-filter="all">All Courses</button>
+      <button class="filter-tab" data-filter="career"><i class="fa-solid fa-graduation-cap me-1"></i> Career Programs</button>
+      <button class="filter-tab" data-filter="cert"><i class="fa-solid fa-certificate me-1"></i> Certifications</button>
+    </div>
+
+    <!-- Course Cards Grid -->
+    <div class="row g-4" id="courseGrid">
+
+      <!-- Card 1: Cloud Computing Engineer (Career) -->
+      <div class="col-md-6 col-lg-6 course-item" data-category="career">
+        <div class="course-card h-100" style="position:relative; overflow:hidden;">
+          <div class="course-accent-bar"></div>
+          <div class="featured-ribbon">Most Popular</div>
+          <span class="course-badge career"><i class="fa-solid fa-graduation-cap"></i> Career Program</span>
+          <div class="course-icon-wrap blue"><i class="fa-solid fa-cloud"></i></div>
+          <h5>Jetking Certified Cloud Computing Engineer with AI</h5>
+          <p class="course-desc">India's most comprehensive 1-Year Master Curriculum engineered to transform complete beginners into industry-ready Cloud & AI professionals. Designed for 10+2 pass-outs, non-IT graduates, and career switchers.</p>
+          <div class="course-meta">
+            <div class="course-meta-item"><i class="fa-solid fa-clock"></i> 1 Year Intensive</div>
+            <div class="course-meta-item"><i class="fa-solid fa-star"></i> Flagship Program</div>
+            <div class="course-meta-item"><i class="fa-solid fa-building"></i> Chandigarh Centre</div>
+          </div>
+          <div class="course-topics">
+            <span class="topic-chip">PC Hardware</span>
+            <span class="topic-chip">Networking Essentials</span>
+            <span class="topic-chip">Windows 10 OS</span>
+            <span class="topic-chip">Red Hat Linux</span>
+            <span class="topic-chip">AWS Cloud</span>
+            <span class="topic-chip">Microsoft Azure</span>
+            <span class="topic-chip">AI Workflow Integration</span>
+          </div>
+          <button class="btn-course orange" onclick="openLeadModal('cloud-ai')">
+            <i class="fa-solid fa-arrow-right me-1"></i> Get Fee Structure & Syllabus
+          </button>
+        </div>
+      </div>
+
+      <!-- Card 2: BCA (Career) -->
+      <div class="col-md-6 col-lg-6 course-item" data-category="career">
+        <div class="course-card h-100">
+          <div class="course-accent-bar"></div>
+          <span class="course-badge career"><i class="fa-solid fa-graduation-cap"></i> Degree Program</span>
+          <div class="course-icon-wrap blue"><i class="fa-solid fa-shield-halved"></i></div>
+          <h5>BCA in Cloud Computing & Cyber Security</h5>
+          <p class="course-desc">A 3-Year University-recognized Bachelor's degree program combining rigorous academic fundamentals with practical vocational cloud security training. Perfect for those seeking both a formal degree and immediate industry-ready skills.</p>
+          <div class="course-meta">
+            <div class="course-meta-item"><i class="fa-solid fa-clock"></i> 3 Years Degree</div>
+            <div class="course-meta-item"><i class="fa-solid fa-university"></i> UGC Recognized</div>
+            <div class="course-meta-item"><i class="fa-solid fa-laptop-code"></i> Dual Track</div>
+          </div>
+          <div class="course-topics">
+            <span class="topic-chip">Cloud Infrastructure</span>
+            <span class="topic-chip">Ethical Hacking</span>
+            <span class="topic-chip">Network Security</span>
+            <span class="topic-chip">Data Structures</span>
+            <span class="topic-chip">Python Programming</span>
+            <span class="topic-chip">Database Management</span>
+          </div>
+          <button class="btn-course" onclick="openLeadModal('bca')">
+            <i class="fa-solid fa-arrow-right me-1"></i> Explore BCA Program Details
+          </button>
+        </div>
+      </div>
+
+      <!-- Card 3: Red Hat Cert -->
+      <div class="col-md-6 col-lg-4 course-item" data-category="cert">
+        <div class="course-card accent-orange h-100">
+          <div class="course-accent-bar"></div>
+          <span class="course-badge cert"><i class="fa-solid fa-certificate"></i> Certification</span>
+          <div class="course-icon-wrap orange"><i class="fa-brands fa-linux"></i></div>
+          <h5>Red Hat Professional Certification</h5>
+          <p class="course-desc">Master enterprise Linux administration, infrastructure automation with Ansible, and Red Hat OpenShift container platforms. Globally recognized — demanded by every enterprise data center and cloud provider.</p>
+          <div class="course-meta">
+            <div class="course-meta-item"><i class="fa-solid fa-clock"></i> Flexible Duration</div>
+            <div class="course-meta-item"><i class="fa-solid fa-globe"></i> Global Cert</div>
+          </div>
+          <div class="course-topics">
+            <span class="topic-chip">RHEL Administration</span>
+            <span class="topic-chip">Ansible Automation</span>
+            <span class="topic-chip">Enterprise Linux</span>
+            <span class="topic-chip">Shell Scripting</span>
+          </div>
+          <button class="btn-course" onclick="openLeadModal('redhat')">
+            <i class="fa-solid fa-arrow-right me-1"></i> Enquire Now
+          </button>
+        </div>
+      </div>
+
+      <!-- Card 4: Networking -->
+      <div class="col-md-6 col-lg-4 course-item" data-category="cert">
+        <div class="course-card accent-orange h-100">
+          <div class="course-accent-bar"></div>
+          <span class="course-badge cert"><i class="fa-solid fa-certificate"></i> Certification</span>
+          <div class="course-icon-wrap orange"><i class="fa-solid fa-network-wired"></i></div>
+          <h5>Networking Essentials Specialist</h5>
+          <p class="course-desc">An intensive 1.5-month certification covering network topologies, routing protocols, infrastructure security, and enterprise network design. Ideal for those entering network support & administration roles.</p>
+          <div class="course-meta">
+            <div class="course-meta-item"><i class="fa-solid fa-clock"></i> 1.5 Months</div>
+            <div class="course-meta-item"><i class="fa-solid fa-bolt"></i> Fast-Track</div>
+          </div>
+          <div class="course-topics">
+            <span class="topic-chip">Network Topologies</span>
+            <span class="topic-chip">Routing Protocols</span>
+            <span class="topic-chip">Network Security</span>
+            <span class="topic-chip">Infrastructure Setup</span>
+          </div>
+          <button class="btn-course" onclick="openLeadModal('networking')">
+            <i class="fa-solid fa-arrow-right me-1"></i> Enquire Now
+          </button>
+        </div>
+      </div>
+
+      <!-- Card 5: PC Hardware -->
+      <div class="col-md-6 col-lg-4 course-item" data-category="cert">
+        <div class="course-card accent-orange h-100">
+          <div class="course-accent-bar"></div>
+          <span class="course-badge cert"><i class="fa-solid fa-certificate"></i> Certification</span>
+          <div class="course-icon-wrap orange"><i class="fa-solid fa-microchip"></i></div>
+          <h5>PC Hardware Support Technician</h5>
+          <p class="course-desc">A concentrated 1-month program covering desktop hardware architecture, system assembly & disassembly, diagnostic pipelines, and L1 technical support operations. Your entry point into IT support careers.</p>
+          <div class="course-meta">
+            <div class="course-meta-item"><i class="fa-solid fa-clock"></i> 1 Month</div>
+            <div class="course-meta-item"><i class="fa-solid fa-wrench"></i> Hands-On</div>
+          </div>
+          <div class="course-topics">
+            <span class="topic-chip">Desktop Assembly</span>
+            <span class="topic-chip">Hardware Diagnostics</span>
+            <span class="topic-chip">Troubleshooting</span>
+            <span class="topic-chip">L1 Tech Support</span>
+          </div>
+          <button class="btn-course" onclick="openLeadModal('hardware')">
+            <i class="fa-solid fa-arrow-right me-1"></i> Enquire Now
+          </button>
+        </div>
+      </div>
+
+    </div><!-- end courseGrid -->
+
+    <!-- CTA Strip -->
+    <div class="text-center mt-5">
+      <p style="font-size:0.85rem; color:var(--text-muted-custom);">Not sure which course fits your profile?</p>
+      <button class="btn-hero-primary mx-auto" onclick="openLeadModal('counselling')" style="display:inline-flex;">
+        <i class="fa-solid fa-comments me-2"></i> Get Free Career Counselling — Chandigarh Centre
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     WHY JETKING CHANDIGARH
+============================================================ -->
+<section id="why-jetking">
+  <div class="container">
+    <div class="row align-items-center gy-5">
+      <div class="col-lg-5">
+        <div class="section-label">Why Jetking Chandigarh</div>
+        <h2 class="section-heading">The Tricity's Most Trusted IT Career Partner</h2>
+        <p class="section-subheading mb-4">For over seven decades, Jetking has been transforming aspirants into industry-ready professionals. The Chandigarh Centre brings that legacy directly to Punjab, Haryana & Himachal Pradesh students.</p>
+        <button class="btn-hero-primary" onclick="openLeadModal('why')" style="display:inline-flex; font-size:0.85rem; padding:11px 24px;">
+          <i class="fa-solid fa-phone me-2"></i> Call Centre: +91-8059402528
+        </button>
+        <div class="mt-4 p-4" style="background:var(--light-alt); border-radius:14px; border:1.5px solid var(--border-light);">
+          <div class="d-flex align-items-center gap-3">
+            <div style="font-size:2.5rem; color:var(--accent);"><i class="fa-solid fa-quote-left"></i></div>
+            <div>
+              <p style="font-size:0.82rem; color:var(--dark-mid); line-height:1.7; margin:0; font-style:italic;">"Jetking's Smart Labs gave me real-world exposure that no classroom-only training could. I got placed at TCS within 3 months of completing my Cloud Engineering course."</p>
+              <p style="font-size:0.72rem; font-weight:700; color:var(--primary); margin-top:8px;">— Arjun Sharma, Chandigarh Graduate → TCS Cloud Engineer</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-7">
+        <div class="row g-3">
+          <div class="col-sm-6 fade-in-up">
+            <div class="feature-card">
+              <div class="feature-icon"><i class="fa-solid fa-flask"></i></div>
+              <div class="feature-content">
+                <h6>Jetking Smart Labs</h6>
+                <p>State-of-the-art physical labs with real enterprise-grade hardware, cloud sandboxes, and live network environments — not just simulations.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 fade-in-up delay-1">
+            <div class="feature-card">
+              <div class="feature-icon"><i class="fa-solid fa-briefcase"></i></div>
+              <div class="feature-content">
+                <h6>100% Placement Assistance</h6>
+                <p>Dedicated placement cell with access to 5,000+ corporate hiring partners actively recruiting Jetking-certified candidates across India.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 fade-in-up delay-2">
+            <div class="feature-card">
+              <div class="feature-icon"><i class="fa-solid fa-chalkboard-user"></i></div>
+              <div class="feature-content">
+                <h6>Industry Expert Faculty</h6>
+                <p>Learn from certified professionals with active corporate experience in AWS, Azure, Red Hat, and cyber security domains — not just academics.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 fade-in-up delay-3">
+            <div class="feature-card">
+              <div class="feature-icon"><i class="fa-solid fa-award"></i></div>
+              <div class="feature-content">
+                <h6>Globally Recognized Certifications</h6>
+                <p>Earn Jetking, Red Hat, Microsoft, and AWS partner-aligned credentials that are instantly recognizable by HR teams worldwide.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 fade-in-up">
+            <div class="feature-card">
+              <div class="feature-icon"><i class="fa-solid fa-users"></i></div>
+              <div class="feature-content">
+                <h6>Small Batch = Personal Attention</h6>
+                <p>Controlled batch sizes ensure every student gets direct instructor interaction and personalized mentoring through the curriculum.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 fade-in-up delay-1">
+            <div class="feature-card">
+              <div class="feature-icon"><i class="fa-solid fa-indian-rupee-sign"></i></div>
+              <div class="feature-content">
+                <h6>Flexible Fee & EMI Options</h6>
+                <p>Zero-cost EMI plans, scholarship programs, and education loan assistance available — making quality IT education affordable for all.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     PLACEMENT STRIP
+============================================================ -->
+<section id="placement-strip">
+  <div class="container position-relative">
+    <div class="row text-center mb-5">
+      <div class="col">
+        <span style="background:rgba(245,158,11,0.2); border:1px solid rgba(245,158,11,0.4); color:var(--accent); font-size:0.72rem; font-weight:700; letter-spacing:1px; text-transform:uppercase; padding:5px 16px; border-radius:20px;">
+          <i class="fa-solid fa-trophy me-1"></i> Placement Performance 2024
+        </span>
+        <h2 class="section-heading mt-3" style="color:var(--white);">Real Numbers. Real Careers. Real Impact.</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-6 col-md-3">
+        <div class="placement-stat">
+          <div class="p-num">96%</div>
+          <div class="p-label">Overall Placement Rate<br>Chandigarh Batch 2024</div>
+        </div>
+      </div>
+      <div class="col-6 col-md-3">
+        <div class="placement-stat">
+          <div class="p-num">₹7.3L</div>
+          <div class="p-label">Average Annual Package<br>Cloud Engineering Roles</div>
+        </div>
+      </div>
+      <div class="col-6 col-md-3">
+        <div class="placement-stat">
+          <div class="p-num">5,000+</div>
+          <div class="p-label">Corporate Hiring<br>Partners Network</div>
+        </div>
+      </div>
+      <div class="col-6 col-md-3">
+        <div class="placement-stat">
+          <div class="p-num">45 Days</div>
+          <div class="p-label">Avg. Time to First<br>Interview Post Completion</div>
+        </div>
+      </div>
+    </div>
+    <div class="row mt-5">
+      <div class="col text-center">
+        <p style="font-size:0.8rem; color:rgba(255,255,255,0.55); margin-bottom:14px;">Jetking graduates work at these organizations and thousands more:</p>
+        <div style="display:flex; gap:16px; justify-content:center; flex-wrap:wrap;">
+          <span style="background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.12); color:rgba(255,255,255,0.8); padding:7px 18px; border-radius:8px; font-size:0.78rem; font-weight:600;">TCS</span>
+          <span style="background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.12); color:rgba(255,255,255,0.8); padding:7px 18px; border-radius:8px; font-size:0.78rem; font-weight:600;">Wipro</span>
+          <span style="background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.12); color:rgba(255,255,255,0.8); padding:7px 18px; border-radius:8px; font-size:0.78rem; font-weight:600;">Infosys</span>
+          <span style="background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.12); color:rgba(255,255,255,0.8); padding:7px 18px; border-radius:8px; font-size:0.78rem; font-weight:600;">HCL Tech</span>
+          <span style="background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.12); color:rgba(255,255,255,0.8); padding:7px 18px; border-radius:8px; font-size:0.78rem; font-weight:600;">Tech Mahindra</span>
+          <span style="background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.12); color:rgba(255,255,255,0.8); padding:7px 18px; border-radius:8px; font-size:0.78rem; font-weight:600;">Cognizant</span>
+          <span style="background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.12); color:rgba(255,255,255,0.8); padding:7px 18px; border-radius:8px; font-size:0.78rem; font-weight:600;">IBM India</span>
+          <span style="background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.12); color:rgba(255,255,255,0.8); padding:7px 18px; border-radius:8px; font-size:0.78rem; font-weight:600;">5,000+ More</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     SMART LAB SECTION
+============================================================ -->
+<section id="smart-lab">
+  <div class="container">
+    <div class="row align-items-center gy-5">
+      <div class="col-lg-6">
+        <div class="section-label">Smart Lab Experience</div>
+        <h2 class="section-heading">Train on Real Infrastructure.<br>Not Just Textbooks.</h2>
+        <p class="section-subheading mb-4">The Jetking Chandigarh Smart Lab is a fully equipped practitioner's environment — designed to mirror actual corporate data centers, cloud environments, and network operation centers you'll work in professionally.</p>
+
+        <div class="lab-feature-item">
+          <div class="lab-icon"><i class="fa-solid fa-server"></i></div>
+          <div>
+            <h6>Enterprise-Grade Server Infrastructure</h6>
+            <p>Hands-on access to physical rack servers, RAID configurations, SAN storage arrays, and live enterprise network switches — not just virtual environments.</p>
+          </div>
+        </div>
+        <div class="lab-feature-item">
+          <div class="lab-icon"><i class="fa-brands fa-aws"></i></div>
+          <div>
+            <h6>AWS & Azure Live Cloud Sandboxes</h6>
+            <p>Real cloud console access for EC2, S3, Lambda, Virtual Machines, and Azure DevOps pipelines — practice with actual production-equivalent environments.</p>
+          </div>
+        </div>
+        <div class="lab-feature-item">
+          <div class="lab-icon"><i class="fa-solid fa-shield-halved"></i></div>
+          <div>
+            <h6>Cyber Security Attack-Defense Lab</h6>
+            <p>Isolated ethical hacking environment with Kali Linux, penetration testing tools, Wireshark, and firewall configuration exercises in a safe controlled setup.</p>
+          </div>
+        </div>
+        <div class="lab-feature-item">
+          <div class="lab-icon"><i class="fa-solid fa-network-wired"></i></div>
+          <div>
+            <h6>Cisco-Aligned Networking Simulation</h6>
+            <p>Configure real Cisco routers & managed switches, practice VLAN, OSPF, BGP, and complete structured cabling installations in our dedicated network lab.</p>
+          </div>
+        </div>
+
+        <button class="btn-hero-primary mt-4" onclick="openLeadModal('lab-demo')" style="display:inline-flex; font-size:0.85rem; padding:12px 24px;">
+          <i class="fa-solid fa-flask me-2"></i> Book Your Free Lab Demo Session
+        </button>
+      </div>
+
+      <div class="col-lg-6">
+        <div class="lab-image-showcase">
+          <i class="fa-solid fa-server lab-icon-large"></i>
+          <div class="lab-floating-cards">
+            <div class="lab-float-chip"><i class="fa-brands fa-aws"></i> AWS Certified Lab</div>
+            <div class="lab-float-chip"><i class="fa-brands fa-microsoft"></i> Azure Console Active</div>
+            <div class="lab-float-chip"><i class="fa-solid fa-wifi"></i> Live Network Topology</div>
+          </div>
+          <div style="position:relative; z-index:2;">
+            <div style="font-size:0.7rem; color:rgba(255,255,255,0.6); text-transform:uppercase; letter-spacing:1px; margin-bottom:8px; font-weight:700;">Chandigarh Smart Lab Overview</div>
+            <h4 style="font-size:1.4rem; font-weight:800; color:var(--white); margin-bottom:12px;">Your Learning. Our Infrastructure.</h4>
+            <p style="font-size:0.8rem; color:rgba(255,255,255,0.75); line-height:1.65; margin-bottom:20px;">Open daily 8:00 AM – 7:00 PM | SCO 66-67, 4th Floor, Sector 34A, Chandigarh. Extended lab access for practising students beyond scheduled class hours.</p>
+            <div style="display:flex; gap:10px; flex-wrap:wrap;">
+              <span style="background:rgba(245,158,11,0.2); border:1px solid rgba(245,158,11,0.4); color:var(--accent); font-size:0.68rem; font-weight:700; padding:4px 12px; border-radius:20px;">50+ Workstations</span>
+              <span style="background:rgba(245,158,11,0.2); border:1px solid rgba(245,158,11,0.4); color:var(--accent); font-size:0.68rem; font-weight:700; padding:4px 12px; border-radius:20px;">24/7 Cloud Access</span>
+              <span style="background:rgba(245,158,11,0.2); border:1px solid rgba(245,158,11,0.4); color:var(--accent); font-size:0.68rem; font-weight:700; padding:4px 12px; border-radius:20px;">Enterprise Hardware</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     LEAD CAPTURE FORM + CONTACT INFO
+============================================================ -->
+<section id="lead-capture">
+  <div class="container">
+    <div class="text-center mb-5">
+      <div class="section-label mx-auto d-inline-flex">Take the First Step</div>
+      <h2 class="section-heading text-center">Request a Local Centre Call-Back</h2>
+      <p class="section-subheading mx-auto text-center">Our Chandigarh course advisors will personally call you within 24 hours to discuss your goals, eligibility, and the best program for your career trajectory.</p>
+    </div>
+
+    <div class="row g-4 align-items-stretch">
+      <div class="col-lg-7">
+        <div class="lead-form-card">
+          <h3><i class="fa-solid fa-headset me-2" style="color:var(--accent);"></i>Enquire Now — It's Free</h3>
+          <p style="font-size:0.8rem; color:var(--text-muted-custom); margin-bottom:24px;">Fill in your details below. No spam. No pressure. Just genuine career guidance from Jetking Chandigarh experts.</p>
+
+          <form id="leadForm" novalidate>
+            <div class="row g-3">
+              <div class="col-sm-6">
+                <label class="form-label">Full Name <span style="color:red;">*</span></label>
+                <input type="text" class="form-control" id="leadName" placeholder="Enter your full name" required />
+                <div class="invalid-feedback">Please enter your full name.</div>
+              </div>
+              <div class="col-sm-6">
+                <label class="form-label">Mobile Number <span style="color:red;">*</span></label>
+                <div class="input-group">
+                  <span class="input-group-text" style="font-size:0.8rem; font-weight:600; color:var(--primary); background:var(--light-alt);">+91</span>
+                  <input type="tel" class="form-control" id="leadPhone" placeholder="10-digit mobile number" maxlength="10" pattern="[6-9][0-9]{9}" required />
+                </div>
+                <div class="invalid-feedback" id="phoneError">Please enter a valid 10-digit mobile number.</div>
+              </div>
+              <div class="col-sm-6">
+                <label class="form-label">Email Address</label>
+                <input type="email" class="form-control" id="leadEmail" placeholder="your@email.com" />
+              </div>
+              <div class="col-sm-6">
+                <label class="form-label">Academic Qualification <span style="color:red;">*</span></label>
+                <select class="form-select" id="leadQual" required>
+                  <option value="">Select your qualification</option>
+                  <option value="10+2">10+2 (Class 12 Pass)</option>
+                  <option value="undergraduate">Undergraduate / Pursuing Degree</option>
+                  <option value="graduate">Graduate (Any Stream)</option>
+                  <option value="non-it-professional">Non-IT Working Professional</option>
+                  <option value="engineering">Engineering Graduate</option>
+                  <option value="diploma">Diploma Holder</option>
+                </select>
+                <div class="invalid-feedback">Please select your qualification.</div>
+              </div>
+              <div class="col-12">
+                <label class="form-label">Target Course of Interest <span style="color:red;">*</span></label>
+                <select class="form-select" id="leadCourse" required>
+                  <option value="">Select your preferred course</option>
+                  <option value="cloud-ai">Jetking Certified Cloud Computing Engineer with AI (1 Year)</option>
+                  <option value="bca">BCA in Cloud Computing & Cyber Security (3 Years)</option>
+                  <option value="redhat">Red Hat Professional Certification</option>
+                  <option value="networking">Networking Essentials Specialist (1.5 Months)</option>
+                  <option value="hardware">PC Hardware Support Technician (1 Month)</option>
+                  <option value="unsure">Not Sure — Need Career Guidance</option>
+                </select>
+                <div class="invalid-feedback">Please select a course of interest.</div>
+              </div>
+              <div class="col-12">
+                <label class="form-label">Any specific message or question?</label>
+                <textarea class="form-control" id="leadMessage" rows="2" placeholder="E.g., I'm a 12th pass student looking for cloud career guidance..."></textarea>
+              </div>
+              <div class="col-12">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="leadConsent" required>
+                  <label class="form-check-label" for="leadConsent" style="font-size:0.75rem; color:var(--text-muted-custom);">
+                    I consent to being contacted by Jetking Chandigarh Centre via phone, WhatsApp, or email regarding my course enquiry.
+                  </label>
+                  <div class="invalid-feedback">You must consent to proceed.</div>
+                </div>
+              </div>
+              <div class="col-12">
+                <button type="submit" class="btn-submit-lead" id="leadSubmitBtn">
+                  <i class="fa-solid fa-paper-plane"></i>
+                  <span id="btnText">Submit Enquiry & Get Free Counselling</span>
+                  <span id="btnLoader" style="display:none;"><i class="fa-solid fa-spinner fa-spin"></i> Submitting...</span>
+                </button>
+              </div>
+            </div>
+          </form>
+
+          <div class="form-success-toast" id="formSuccessToast">
+            <i class="fa-solid fa-circle-check fa-lg"></i>
+            <strong>Thank you! Your enquiry has been submitted successfully.</strong><br>
+            <span style="font-weight:400; margin-top:6px; display:block;">A Jetking Chandigarh course advisor will call you on your registered number within 24 hours. For immediate assistance, call us at <a href="tel:+918059402528" style="color:var(--success-green); font-weight:700;">+91-8059402528</a></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-5">
+        <div class="lead-info-panel h-100">
+          <h4><i class="fa-solid fa-location-dot me-2" style="color:var(--accent);"></i>Visit Us Directly</h4>
+
+          <div class="contact-info-item">
+            <div class="ci-icon"><i class="fa-solid fa-building"></i></div>
+            <div>
+              <div class="ci-label">Centre Address</div>
+              <div class="ci-value">4th Floor, S.C.O. 66-67,<br>Near SBI Bank, Behind Picadily Cinema Hall,<br>Sector 34A, Chandigarh — 160022</div>
+            </div>
+          </div>
+
+          <div class="contact-info-item">
+            <div class="ci-icon"><i class="fa-solid fa-phone"></i></div>
+            <div>
+              <div class="ci-label">Direct Helpline</div>
+              <div class="ci-value">
+                <a href="tel:+918059402528">+91-80594 02528</a><br>
+                <a href="tel:+919872858765">+91-98728 58765</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-info-item">
+            <div class="ci-icon"><i class="fa-brands fa-whatsapp"></i></div>
+            <div>
+              <div class="ci-label">WhatsApp Enquiry</div>
+              <div class="ci-value"><a href="https://wa.me/918059402528" target="_blank">Chat on WhatsApp — +91-80594 02528</a></div>
+            </div>
+          </div>
+
+          <div class="contact-info-item">
+            <div class="ci-icon"><i class="fa-solid fa-clock"></i></div>
+            <div>
+              <div class="ci-label">Operating Hours</div>
+              <div class="ci-value">Open Daily: 8:00 AM – 7:00 PM<br><span style="font-size:0.72rem; color:rgba(255,255,255,0.5);">Monday through Sunday including Weekends</span></div>
+            </div>
+          </div>
+
+          <div class="contact-info-item">
+            <div class="ci-icon"><i class="fa-solid fa-envelope"></i></div>
+            <div>
+              <div class="ci-label">Email Enquiry</div>
+              <div class="ci-value"><a href="mailto:chandigarh@jetking.com">chandigarh@jetking.com</a></div>
+            </div>
+          </div>
+
+          <div style="margin-top:20px; padding:16px; background:rgba(245,158,11,0.12); border:1px solid rgba(245,158,11,0.25); border-radius:12px;">
+            <div style="font-size:0.72rem; color:var(--accent); font-weight:700; text-transform:uppercase; letter-spacing:0.5px; margin-bottom:8px;"><i class="fa-solid fa-star me-1"></i> Why Walk In?</div>
+            <p style="font-size:0.78rem; color:rgba(255,255,255,0.75); line-height:1.6; margin:0;">Visit our Chandigarh centre to get a live Smart Lab tour, meet faculty, and experience a free demo class — all at zero commitment. Walk-ins welcome daily!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     MAP / LOCATION SECTION
+============================================================ -->
+<section id="location-map">
+  <div class="container">
+    <div class="text-center mb-4">
+      <div class="section-label mx-auto d-inline-flex">Find Us</div>
+      <h2 class="section-heading text-center">Located in the Heart of Chandigarh</h2>
+    </div>
+    <div class="map-card">
+      <a class="map-placeholder" href="https://maps.google.com/?q=SCO+66-67+Sector+34A+Chandigarh" target="_blank" rel="noopener">
+        <i class="fa-solid fa-map-location-dot map-icon"></i>
+        <span class="map-label"><i class="fa-solid fa-location-dot me-2"></i> Jetking Chandigarh — SCO 66-67, Sector 34A</span>
+        <span class="map-addr">4th Floor, S.C.O. 66-67, Near SBI Bank, Behind Picadily Cinema Hall, Sector 34A, Chandigarh — 160022</span>
+        <span style="font-size:0.75rem; color:var(--primary); font-weight:600; margin-top:4px;"><i class="fa-solid fa-external-link me-1"></i> Click to Open in Google Maps</span>
+      </a>
+      <div style="padding:20px 24px; background:var(--white); display:flex; gap:20px; flex-wrap:wrap; align-items:center; border-top:1.5px solid var(--border-light);">
+        <div style="display:flex; align-items:center; gap:8px; font-size:0.8rem; color:var(--dark-mid); font-weight:500;">
+          <i class="fa-solid fa-bus" style="color:var(--primary);"></i> Near Sector 34 Bus Stand
+        </div>
+        <div style="display:flex; align-items:center; gap:8px; font-size:0.8rem; color:var(--dark-mid); font-weight:500;">
+          <i class="fa-solid fa-train" style="color:var(--primary);"></i> 15 min from Chandigarh Railway Station
+        </div>
+        <div style="display:flex; align-items:center; gap:8px; font-size:0.8rem; color:var(--dark-mid); font-weight:500;">
+          <i class="fa-solid fa-car" style="color:var(--primary);"></i> Ample Parking Available
+        </div>
+        <div style="display:flex; align-items:center; gap:8px; font-size:0.8rem; color:var(--dark-mid); font-weight:500;">
+          <i class="fa-solid fa-landmark" style="color:var(--primary);"></i> Behind Picadily Cinema Hall
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     FOOTER
+============================================================ -->
+<footer id="footer">
+  <div class="container">
+    <div class="row g-4">
+      <!-- Brand Column -->
+      <div class="col-lg-4 col-md-6">
+        <div class="footer-logo-wrap">
+          <div class="footer-logo-icon">JK</div>
+          <div>
+            <div class="footer-brand-name">Jetking Chandigarh</div>
+            <div class="footer-tagline">IT Cloud & Cyber Security Academy</div>
+          </div>
+        </div>
+        <p class="footer-desc">India's pioneering IT training institution since 1945. The Chandigarh Centre serves students across Chandigarh, Mohali, Panchkula, and the greater Tricity region with industry-aligned tech education and guaranteed placement support.</p>
+        <div class="footer-accreditation">
+          <i class="fa-solid fa-certificate"></i> ISO 9001:2015 Certified Training Institute
+        </div>
+        <div class="footer-social-links mt-3">
+          <a href="#" class="social-btn" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="social-btn" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="social-btn" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#" class="social-btn" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          <a href="https://wa.me/918059402528" class="social-btn" aria-label="WhatsApp" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+
+      <!-- Courses Column -->
+      <div class="col-lg-2 col-md-6 col-6">
+        <div class="footer-col-title">Programs</div>
+        <ul class="footer-links">
+          <li><a href="#courses"><i class="fa-solid fa-chevron-right"></i> Cloud Computing Engineer</a></li>
+          <li><a href="#courses"><i class="fa-solid fa-chevron-right"></i> BCA — Cloud & Cyber Security</a></li>
+          <li><a href="#courses"><i class="fa-solid fa-chevron-right"></i> Red Hat Certification</a></li>
+          <li><a href="#courses"><i class="fa-solid fa-chevron-right"></i> Networking Essentials</a></li>
+          <li><a href="#courses"><i class="fa-solid fa-chevron-right"></i> PC Hardware Support</a></li>
+          <li><a href="#courses"><i class="fa-solid fa-chevron-right"></i> Ethical Hacking</a></li>
+        </ul>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="col-lg-2 col-md-6 col-6">
+        <div class="footer-col-title">Quick Links</div>
+        <ul class="footer-links">
+          <li><a href="#hero"><i class="fa-solid fa-chevron-right"></i> Home</a></li>
+          <li><a href="#why-jetking"><i class="fa-solid fa-chevron-right"></i> Why Jetking</a></li>
+          <li><a href="#smart-lab"><i class="fa-solid fa-chevron-right"></i> Smart Labs</a></li>
+          <li><a href="#placement-strip"><i class="fa-solid fa-chevron-right"></i> Placements</a></li>
+          <li><a href="https://www.jetking.com" target="_blank"><i class="fa-solid fa-chevron-right"></i> Jetking National</a></li>
+          <li><a href="#lead-capture"><i class="fa-solid fa-chevron-right"></i> Free Counselling</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact Column -->
+      <div class="col-lg-4 col-md-6">
+        <div class="footer-col-title">Chandigarh Centre Contact</div>
+        <div class="footer-contact-item">
+          <i class="fa-solid fa-location-dot"></i>
+          <span>4th Floor, S.C.O. 66-67, Near SBI Bank, Behind Picadily Cinema Hall, Sector 34A, Chandigarh — 160022</span>
+        </div>
+        <div class="footer-contact-item">
+          <i class="fa-solid fa-phone"></i>
+          <span><a href="tel:+918059402528">+91-80594 02528</a> | <a href="tel:+919872858765">+91-98728 58765</a></span>
+        </div>
+        <div class="footer-contact-item">
+          <i class="fa-solid fa-envelope"></i>
+          <span><a href="mailto:chandigarh@jetking.com">chandigarh@jetking.com</a></span>
+        </div>
+        <div class="footer-contact-item">
+          <i class="fa-solid fa-clock"></i>
+          <span>Open Daily: 8:00 AM – 7:00 PM (Mon – Sun)</span>
+        </div>
+        <div class="mt-3">
+          <button class="btn-hero-primary" onclick="openLeadModal('footer-enrol')" style="font-size:0.8rem; padding:10px 20px; display:inline-flex;">
+            <i class="fa-solid fa-graduation-cap me-2"></i> Enrol at Chandigarh Centre
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer Bottom -->
+    <div class="footer-divider">
+      <div class="row align-items-center">
+        <div class="col-md-6">
+          <div class="footer-bottom-text">
+            © 2024 Jetking Infotrain Ltd. — Chandigarh Centre. All Rights Reserved.<br>
+            <span style="font-size:0.7rem;">Jetking® is a registered trademark of Jetking Infotrain Limited. Established 1945.</span>
+          </div>
+        </div>
+        <div class="col-md-6 text-md-end mt-3 mt-md-0">
+          <div class="footer-bottom-text">
+            <a href="#" style="color:rgba(255,255,255,0.4); text-decoration:none; font-size:0.72rem; margin-right:14px;">Privacy Policy</a>
+            <a href="#" style="color:rgba(255,255,255,0.4); text-decoration:none; font-size:0.72rem; margin-right:14px;">Terms of Use</a>
+            <a href="#" style="color:rgba(255,255,255,0.4); text-decoration:none; font-size:0.72rem;">Sitemap</a>
+          </div>
+          <div style="font-size:0.7rem; color:rgba(255,255,255,0.3); margin-top:6px;">
+            200+ Centres across India | NSDC Partner | ISO Certified
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ============================================================
+     FLOATING ACTION BUTTONS
+============================================================ -->
+<div class="floating-actions">
+  <a href="https://wa.me/918059402528" class="float-btn whatsapp" target="_blank" aria-label="WhatsApp" title="Chat on WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+  <a href="tel:+918059402528" class="float-btn call" aria-label="Call us" title="Call Now">
+    <i class="fa-solid fa-phone"></i>
+  </a>
+</div>
+
+<!-- ============================================================
+     LEAD MODAL
+============================================================ -->
+<div class="modal fade" id="leadModal" tabindex="-1" aria-labelledby="leadModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <div class="modal-header-custom">
+        <div class="d-flex align-items-center gap-3">
+          <div style="width:46px; height:46px; background:rgba(255,255,255,0.15); border-radius:12px; display:flex; align-items:center; justify-content:center; font-size:1.3rem;"><i class="fa-solid fa-graduation-cap" style="color:var(--accent);"></i></div>
+          <div>
+            <div class="modal-title" id="leadModalLabel">Get Your Free Course Brochure & Counselling</div>
+            <div style="font-size:0.72rem; color:rgba(255,255,255,0.7);">Jetking Chandigarh — SCO 66-67, Sector 34A | Response within 24 hours</div>
+          </div>
+        </div>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body-custom">
+        <div class="row g-3">
+          <div class="col-sm-6">
+            <label class="modal-form-label">Full Name <span style="color:red;">*</span></label>
+            <input type="text" class="modal-form-control" id="modalName" placeholder="Your full name" required />
+          </div>
+          <div class="col-sm-6">
+            <label class="modal-form-label">Mobile Number <span style="color:red;">*</span></label>
+            <input type="tel" class="modal-form-control" id="modalPhone" placeholder="+91 XXXXX XXXXX" maxlength="13" required />
+          </div>
+          <div class="col-sm-6">
+            <label class="modal-form-label">Academic Qualification</label>
+            <select class="modal-form-control" id="modalQual" style="appearance:auto;">
+              <option value="">Select qualification</option>
+              <option>10+2 (Class 12 Pass)</option>
+              <option>Undergraduate / Pursuing</option>
+              <option>Graduate (Any Stream)</option>
+              <option>Non-IT Working Professional</option>
+              <option>Engineering Graduate</option>
+            </select>
+          </div>
+          <div class="col-sm-6">
+            <label class="modal-form-label">Course of Interest</label>
+            <select class="modal-form-control" id="modalCourse" style="appearance:auto;">
+              <option value="">Select course</option>
+              <option>Cloud Computing Engineer with AI (1 Year)</option>
+              <option>BCA — Cloud Computing & Cyber Security</option>
+              <option>Red Hat Professional Certification</option>
+              <option>Networking Essentials Specialist</option>
+              <option>PC Hardware Support Technician</option>
+              <option>Help me choose the right course</option>
+            </select>
+          </div>
+          <div class="col-12">
+            <button type="button" class="btn-modal-submit" id="modalSubmitBtn" onclick="handleModalSubmit()">
+              <i class="fa-solid fa-paper-plane me-2"></i>
+              <span id="modalBtnText">Send My Enquiry — Get Free Counselling Call</span>
+            </button>
+          </div>
+        </div>
+        <div class="modal-trust-badges">
+          <div class="modal-trust-badge"><i class="fa-solid fa-lock"></i> 100% Data Secure</div>
+          <div class="modal-trust-badge"><i class="fa-solid fa-circle-check"></i> No Spam Guarantee</div>
+          <div class="modal-trust-badge"><i class="fa-solid fa-phone"></i> Call Within 24 Hours</div>
+          <div class="modal-trust-badge"><i class="fa-solid fa-shield-halved"></i> Free — Zero Obligation</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Success Modal -->
+<div class="modal fade" id="successModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-sm">
+    <div class="modal-content" style="border-radius:20px; border:none; text-align:center; padding:10px;">
+      <div class="modal-body" style="padding:40px 30px;">
+        <div style="width:72px; height:72px; background:rgba(16,185,129,0.1); border-radius:50%; display:flex; align-items:center; justify-content:center; margin:0 auto 20px; font-size:2rem; color:var(--success-green);">
+          <i class="fa-solid fa-circle-check"></i>
+        </div>
+        <h5 style="font-size:1.1rem; font-weight:800; color:var(--dark); margin-bottom:10px;">Enquiry Submitted! 🎉</h5>
+        <p style="font-size:0.82rem; color:var(--text-muted-custom); line-height:1.6; margin-bottom:20px;">Thank you! Our Chandigarh course advisor will call you within <strong>24 hours</strong>. For immediate help, reach us at:</p>
+        <a href="tel:+918059402528" style="display:flex; align-items:center; justify-content:center; gap:8px; background:linear-gradient(135deg,var(--primary),var(--primary-light)); color:white; text-decoration:none; padding:12px 20px; border-radius:8px; font-weight:700; font-size:0.88rem; margin-bottom:10px;">
+          <i class="fa-solid fa-phone"></i> Call +91-80594 02528
+        </a>
+        <button class="btn btn-link" data-bs-dismiss="modal" style="font-size:0.78rem; color:var(--text-muted-custom);">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================
+     BOOTSTRAP JS
+============================================================ -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+  /* ============================================================
+     COURSE FILTER TABS — VANILLA JS
+  ============================================================ */
+  const filterTabs = document.querySelectorAll('.filter-tab');
+  const courseItems = document.querySelectorAll('.course-item');
+
+  filterTabs.forEach(tab => {
+    tab.addEventListener('click', function() {
+      // Update active state
+      filterTabs.forEach(t => t.classList.remove('active'));
+      this.classList.add('active');
+
+      const filter = this.getAttribute('data-filter');
+
+      courseItems.forEach(item => {
+        const category = item.getAttribute('data-category');
+        if (filter === 'all' || category === filter) {
+          item.style.display = '';
+          item.style.opacity = '0';
+          item.style.transform = 'translateY(12px)';
+          requestAnimationFrame(() => {
+            setTimeout(() => {
+              item.style.transition = 'opacity 0.35s ease, transform 0.35s ease';
+              item.style.opacity = '1';
+              item.style.transform = 'translateY(0)';
+            }, 30);
+          });
+        } else {
+          item.style.transition = 'opacity 0.2s ease';
+          item.style.opacity = '0';
+          setTimeout(() => { item.style.display = 'none'; }, 200);
+        }
+      });
+    });
+  });
+
+  /* ============================================================
+     LEAD MODAL — OPEN / CLOSE
+  ============================================================ */
+  let currentSource = '';
+  const leadModalEl = document.getElementById('leadModal');
+  const leadModal = new bootstrap.Modal(leadModalEl);
+
+  function openLeadModal(source) {
+    currentSource = source;
+    const titleEl = document.getElementById('leadModalLabel');
+    const courseSelect = document.getElementById('modalCourse');
+
+    // Customize modal based on source
+    switch(source) {
+      case 'brochure':
+        titleEl.textContent = 'Download Centre Brochure & Fee Structure';
+        break;
+      case 'demo':
+        titleEl.textContent = 'Book Your Free Smart Lab Demo Class';
+        break;
+      case 'cloud-ai':
+        titleEl.textContent = 'Cloud Computing Engineer + AI — Enquire Now';
+        if(courseSelect) courseSelect.value = courseSelect.options[1]?.value || '';
+        break;
+      case 'bca':
+        titleEl.textContent = 'BCA — Cloud & Cyber Security Program Enquiry';
+        break;
+      case 'redhat':
+        titleEl.textContent = 'Red Hat Certification — Get Course Details';
+        break;
+      case 'lab-demo':
+        titleEl.textContent = 'Book Free Smart Lab Demo — Chandigarh Centre';
+        break;
+      default:
+        titleEl.textContent = 'Get Free Course Brochure & Counselling';
+    }
+
+    // Reset modal form
+    document.getElementById('modalName').value = '';
+    document.getElementById('modalPhone').value = '';
+    document.getElementById('modalBtnText').textContent = 'Send My Enquiry — Get Free Counselling Call';
+    document.getElementById('modalSubmitBtn').disabled = false;
+
+    leadModal.show();
+  }
+
+  /* ============================================================
+     MODAL FORM SUBMISSION
+  ============================================================ */
+  function handleModalSubmit() {
+    const name = document.getElementById('modalName').value.trim();
+    const phone = document.getElementById('modalPhone').value.trim();
+
+    if (!name || name.length < 2) {
+      document.getElementById('modalName').style.borderColor = '#ef4444';
+      document.getElementById('modalName').focus();
+      document.getElementById('modalName').placeholder = '⚠ Please enter your name';
+      return;
+    }
+    document.getElementById('modalName').style.borderColor = '';
+
+    const phoneClean = phone.replace(/\D/g, '');
+    if (!phone || phoneClean.length < 10) {
+      document.getElementById('modalPhone').style.borderColor = '#ef4444';
+      document.getElementById('modalPhone').focus();
+      document.getElementById('modalPhone').placeholder = '⚠ Valid mobile required';
+      return;
+    }
+    document.getElementById('modalPhone').style.borderColor = '';
+
+    // Simulate submission
+    const btn = document.getElementById('modalSubmitBtn');
+    const btnText = document.getElementById('modalBtnText');
+    btn.disabled = true;
+    btnText.innerHTML = '<i class="fa-solid fa-spinner fa-spin me-2"></i> Submitting...';
+
+    setTimeout(() => {
+      leadModal.hide();
+      setTimeout(() => {
+        const successModal = new bootstrap.Modal(document.getElementById('successModal'));
+        successModal.show();
+      }, 300);
+    }, 1400);
+  }
+
+  /* ============================================================
+     INLINE LEAD FORM SUBMISSION
+  ============================================================ */
+  document.getElementById('leadForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    const name = document.getElementById('leadName').value.trim();
+    const phone = document.getElementById('leadPhone').value.trim();
+    const qual = document.getElementById('leadQual').value;
+    const course = document.getElementById('leadCourse').value;
+    const consent = document.getElementById('leadConsent').checked;
+
+    let valid = true;
+
+    if (!name || name.length < 2) {
+      document.getElementById('leadName').classList.add('is-invalid');
+      valid = false;
+    } else {
+      document.getElementById('leadName').classList.remove('is-invalid');
+      document.getElementById('leadName').classList.add('is-valid');
+    }
+
+    const phoneClean = phone.replace(/\D/g,'');
+    if (!phone || phoneClean.length !== 10 || !/^[6-9]/.test(phoneClean)) {
+      document.getElementById('leadPhone').classList.add('is-invalid');
+      document.getElementById('phoneError').style.display = 'block';
+      valid = false;
+    } else {
+      document.getElementById('leadPhone').classList.remove('is-invalid');
+      document.getElementById('leadPhone').classList.add('is-valid');
+      document.getElementById('phoneError').style.display = 'none';
+    }
+
+    if (!qual) {
+      document.getElementById('leadQual').classList.add('is-invalid');
+      valid = false;
+    } else {
+      document.getElementById('leadQual').classList.remove('is-invalid');
+      document.getElementById('leadQual').classList.add('is-valid');
+    }
+
+    if (!course) {
+      document.getElementById('leadCourse').classList.add('is-invalid');
+      valid = false;
+    } else {
+      document.getElementById('leadCourse').classList.remove('is-invalid');
+      document.getElementById('leadCourse').classList.add('is-valid');
+    }
+
+    if (!consent) {
+      document.getElementById('leadConsent').classList.add('is-invalid');
+      valid = false;
+    } else {
+      document.getElementById('leadConsent').classList.remove('is-invalid');
+    }
+
+    if (!valid) return;
+
+    // Simulate submission
+    const btn = document.getElementById('leadSubmitBtn');
+    const btnText = document.getElementById('btnText');
+    const btnLoader = document.getElementById('btnLoader');
+    btn.disabled = true;
+    btnText.style.display = 'none';
+    btnLoader.style.display = 'inline-flex';
+
+    setTimeout(() => {
+      btn.disabled = false;
+      btnText.style.display = 'inline';
+      btnLoader.style.display = 'none';
+
+      const toast = document.getElementById('formSuccessToast');
+      toast.style.display = 'block';
+      toast.style.opacity = '0';
+      toast.style.transform = 'translateY(10px)';
+      requestAnimationFrame(() => {
+        toast.style.transition = 'opacity 0.4s ease, transform 0.4s ease';
+        toast.style.opacity = '1';
+        toast.style.transform = 'translateY(0)';
+      });
+
+      // Scroll to toast
+      toast.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+
+      // Reset form
+      this.reset();
+      this.querySelectorAll('.is-valid, .is-invalid').forEach(el => {
+        el.classList.remove('is-valid', 'is-invalid');
+      });
+    }, 1800);
+  });
+
+  /* ============================================================
+     SCROLL REVEAL ANIMATIONS
+  ============================================================ */
+  const observerOptions = { threshold: 0.15, rootMargin: '0px 0px -30px 0px' };
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('.fade-in-up').forEach(el => observer.observe(el));
+
+  /* ============================================================
+     COUNTER ANIMATION
+  ============================================================ */
+  function animateCounter(el) {
+    const target = parseFloat(el.getAttribute('data-target'));
+    const decimal = el.getAttribute('data-decimal') || '';
+    const duration = 1800;
+    const start = performance.now();
+
+    function update(currentTime) {
+      const elapsed = currentTime - start;
+      const progress = Math.min(elapsed / duration, 1);
+      const eased = 1 - Math.pow(1 - progress, 3);
+      const current = eased * target;
+
+      if (decimal) {
+        el.textContent = current.toFixed(1);
+      } else if (target >= 1000) {
+        el.textContent = Math.floor(current).toLocaleString('en-IN');
+      } else {
+        el.textContent = Math.floor(current);
+      }
+
+      if (progress < 1) requestAnimationFrame(update);
+    }
+
+    requestAnimationFrame(update);
+  }
+
+  const counterObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        animateCounter(entry.target);
+        counterObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.5 });
+
+  document.querySelectorAll('.count-up').forEach(el => counterObserver.observe(el));
+
+  /* ============================================================
+     SMOOTH NAVBAR ACTIVE STATE ON SCROLL
+  ============================================================ */
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('#main-navbar .nav-link');
+
+  window.addEventListener('scroll', () => {
+    let scrollY = window.scrollY + 100;
+    sections.forEach(section => {
+      const sectionTop = section.offsetTop;
+      const sectionHeight = section.offsetHeight;
+      const sectionId = section.getAttribute('id');
+      if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+        navLinks.forEach(link => {
+          link.classList.remove('active');
+          if (link.getAttribute('href') === '#' + sectionId) {
+            link.classList.add('active');
+          }
+        });
+      }
+    });
+  });
+
+  /* ============================================================
+     HERO TECH ORBIT ANIMATION
+  ============================================================ */
+  const orbitItems = document.querySelectorAll('.tech-orbit-item .icon-wrap');
+  orbitItems.forEach((item, i) => {
+    setInterval(() => {
+      item.style.transform = 'translateY(-4px)';
+      setTimeout(() => { item.style.transform = 'translateY(0)'; }, 600);
+    }, 2000 + (i * 350));
+  });
+
+  /* ============================================================
+     NAVBAR SHADOW ON SCROLL
+  ============================================================ */
+  window.addEventListener('scroll', () => {
+    const navbar = document.getElementById('main-navbar');
+    if (window.scrollY > 60) {
+      navbar.style.boxShadow = '0 4px 30px rgba(30,58,138,0.15)';
+    } else {
+      navbar.style.boxShadow = '0 2px 20px rgba(30,58,138,0.08)';
+    }
+  });
+
+  /* ============================================================
+     PHONE INPUT — Numbers Only
+  ============================================================ */
+  document.getElementById('leadPhone').addEventListener('input', function() {
+    this.value = this.value.replace(/\D/g, '').slice(0, 10);
+  });
+
+  document.getElementById('modalPhone').addEventListener('input', function() {
+    let val = this.value.replace(/[^\d+]/g, '');
+    if (!val.startsWith('+91')) {
+      val = val.replace(/\D/g, '').slice(0, 10);
+    }
+    this.value = val;
+  });
+
+  /* ============================================================
+     MODAL KEYBOARD SUPPORT
+  ============================================================ */
+  document.getElementById('modalPhone').addEventListener('keypress', function(e) {
+    if (e.key === 'Enter') handleModalSubmit();
+  });
+  document.getElementById('modalName').addEventListener('keypress', function(e) {
+    if (e.key === 'Enter') document.getElementById('modalPhone').focus();
+  });
+</script>
+
+</body>
+</html>
